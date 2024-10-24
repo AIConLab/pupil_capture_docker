@@ -11,7 +11,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /dev/shm:/dev/shm
-      - ./app/pupil_capture_settings:/app/pupil/capture_settings
+      - ../pupil_capture_settings:/app/pupil/capture_settings
     devices:
       - /dev/video0:/dev/video0
       - /dev/dri:/dev/dri
@@ -25,4 +25,4 @@ services:
     privileged: true
     group_add:
       - plugdev
-    command: "bin/bash" # Start the container with bash
+    command: bash
